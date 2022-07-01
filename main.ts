@@ -4,11 +4,11 @@ import { Product } from "./product";
 import { ProductManagement } from "./product-management";
 let productManagement = new ProductManagement()
 
-let a = new Product('a','s',2,2,'2','A')
+let a = new Product('a','s',2,2,'A')
 productManagement.addNew(a)
-let b = new Product('b','m',2,2,'2','B')
+let b = new Product('b','m',2,2,'B')
 productManagement.addNew(b)
-let c = new Product('c','l',2,2,'2','C')
+let c = new Product('c','l',2,2,'C')
 productManagement.addNew(c)
 enum Choice {
     EXIT = 0,
@@ -76,7 +76,7 @@ function editProduct() {
     let amount: number = inputProductAmount()
     let describe: string = inputProductDescribe()
     let type: string = inputType()
-    let newProduct = new Product(name,type,price,amount,'3',describe)
+    let newProduct = new Product(name,type,price,amount,describe)
     productManagement.editById(id,newProduct)
 }
 
@@ -167,7 +167,7 @@ function addNewProduct() {
     let amount: number = inputProductAmount()
     let describe: string = inputProductDescribe()
     let type: string = inputType()
-    let newProduct = new Product(name,type,price,amount,'3',describe)
+    let newProduct = new Product(name,type,price,amount,describe)
     productManagement.addNew(newProduct)
 }
 function removeProduct() {

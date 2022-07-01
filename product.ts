@@ -8,13 +8,13 @@ export class Product {
     private amount: number
     private createdDay: string
     private describe: string
-    constructor( name: string, type: string, price: number, amount: number, createdDay: string, describe: string) {
+    constructor( name: string, type: string, price: number, amount: number, describe: string) {
         this.id = ProductManagement.products.length+1
         this.name = name
         this.type = type
         this.price = price
         this.amount = amount
-        this.createdDay = createdDay
+        this.createdDay = '01/07/2022'
         this.describe = describe
     }
     getId(): number {
